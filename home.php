@@ -13,19 +13,17 @@
 
 </head>
 <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">دیوار</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <button class="btn btn-outline-success" type="button" onclick="submitAdsPage()">ثبت آگهی</button>
+        <button class="btn btn-sm btn-outline-secondary" type="button" onclick="reginster()">ثبت نام</button>
+        <?php 
+        if (!isset($_COOKIE['username'])) {
+            echo '<button class="btn btn-sm btn-outline-secondary" type="button" onclick="login()">ورود</button>';
+        }
+        ?>
+      </form>
+    </nav>
 
     <div class="container">
         <div class="row">

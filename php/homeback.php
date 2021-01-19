@@ -19,6 +19,5 @@ while($row = mysqli_fetch_assoc($retval)) {
       array_push($ads,$row);
 }
 
-echo "Fetched data successfully\n";
 
 ?>
