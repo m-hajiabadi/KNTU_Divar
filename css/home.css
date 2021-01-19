@@ -1,0 +1,18 @@
+.advertising{
+    border: solid 1px;
+}
+.advertising-image img{
+    height: 150px;
+    width: 200px;
+    border: solid 3px red;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.name,.cost{
+    margin-bottom: 50px;
+    border-radius: 7px;
+    background-color: yellow;
+    width: 70px;
+    text-align: center;
+}
