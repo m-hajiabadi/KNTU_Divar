@@ -1,11 +1,56 @@
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/Vazir.eot');
+    src: url('./fonts/Vazir.eot?#iefix') format('embedded-opentype'), url('./fonts/Vazir.woff2') format('woff2'), url('./fonts/Vazir.woff') format('woff'), url('./fonts/Vazir.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: VazirBold;
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/Vazir-Bold.eot');
+    src: url('./fonts/Vazir-Bold.eot') format('embedded-opentype'), url('./fonts/Vazir-Bold.eot') format('woff2'), url('./fonts/Vazir-Bold.eot') format('woff'), url('./fonts/Vazir-Bold.eot') format('truetype');
+}
+
+body{
+    font-family: Vazir;
+    font-weight: normal;
+    direction: rtl;
+}
+
+.mynav{
+    background-color: rgb(189, 187, 186);
+    border-bottom: solid 3px rgb(88, 87, 87);
+    margin-bottom: 25px;
+}
+
+.mynav img{
+    height: 50px;
+    max-width: 50px;
+}
+li{
+    margin: 15px 15px 15px 25px;
+    font-family: Vazir;
+}
+
+li a{
+    color: black;
+}
+
+#submit-ads a{
+    background-color: #be3737;
+}
+
 .advertising{
     border: solid 1px;
 }
 .advertising-image img{
     height: 150px;
     width: 200px;
-    border: solid 3px red;
-    border-radius: 10px;
+    border: solid 2px  rgb(88, 87, 87);
+    border-radius: 5px;
     margin: 5px;
 }
 
@@ -16,3 +61,5 @@
     width: 70px;
     text-align: center;
 }
+
+
