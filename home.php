@@ -71,9 +71,10 @@
                         </div>
                     </div>
                     <div class="advertising-image col-md-8">
-                        <img src="./css/defaultpic.png" alt="تصویر خدمت یا کالا">
+                        <img src=<?php echo "upload/".$value['image'];?> alt="تصویر خدمت یا کالا">
                     </div>
-                </div>
+                </div>  
+                
             </div>
             <?php endforeach; ?>
 
