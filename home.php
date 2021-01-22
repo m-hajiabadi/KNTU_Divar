@@ -22,14 +22,6 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
-        <button class="btn btn-outline-success" id="submitAds" type="button" onclick="submitAdsPage()">ثبت آگهی</button>
-        <button class="btn btn-sm btn-outline-secondary" type="button" onclick="reginster()">ثبت نام</button>
- 
-      </form>
-    </nav> -->
-
     <div class="mynav sticky-top">
         <a class="navbar-brand" href="home.php">
             <img src="./css/divar.png" alt="دیوار" loading="lazy">
@@ -66,35 +58,29 @@
 
     </div>
 
-    <!-- <div class="container">
-        <div class="row">
-            <?php foreach ($ads as $value) : ?>
-            <div class="advertising col-md-4">
-                <div class="row">
-                    <div class="info col-md-4">
-                        <div class="name row">
-                            <?php
-                            // echo($temp['name']);
-                            ?>
-                            <?= $value['city']; ?>
-                            <?= $value['cost']; ?>
-                            <?= $value['name']; ?>
-                        </div>
-                        <div class="cost row">
-                            <?php
-                            // echo($temp['cost']);
-                            ?>
-                        </div>
-                    </div>
-                    <div class="advertising-image col-md-8">
-                        <img src=<?php echo "upload/" . $value['image']; ?> alt="تصویر خدمت یا کالا">
-                    </div>
-                </div>  
-                
-            </div>
-            <?php endforeach; ?> 
-    </div> -->
+    <div class="AboutUs" id="AboutUs">
+            <div class="aboutus pt-5">
+                <div class="container">
 
+                    <div class="row">
+                        <div class="col-sm-6 AboutUs-info pr-5">
+
+                            <h1 class="title "> درباره چارسوق</h1>
+                            <p id="description">
+در چارسوق به آسانی می‌توانید نیازمندی‌هایتان را بیابید.</p>
+                                
+                            
+                        </div>
+
+                        <div class="AboutUs-logo col-sm-6 ">
+                            <img class=" mx-auto d-block pt-5" src="./css/divar.png" alt="Logo ">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <hr class="rounded">
     <div class="main-ads">
         <div class="ads container-fluid ">
 

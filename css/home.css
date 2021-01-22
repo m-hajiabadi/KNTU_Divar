@@ -43,9 +43,59 @@ li a{
     background-color: #be3737;
 }
 
-.advertising{
-    border: solid 1px;
+#AboutUs{
+    /* background-image: url('../assets/hafez.jpg'); */
+    background-size:100% ;
+    width: auto;
+    height: 400px;
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
 }
+
+#AboutUs .row{
+    background-color: #fafafa;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+
+.main-section .AboutUs {
+    background-color: #fafafa;
+    padding: 100px 0;
+}
+
+.AboutUs .AboutUs-info {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.AboutUs .AboutUs-logo img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.AboutUs h1 {
+    text-align: right;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.AboutUs-info #description {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: right;
+    font-family: Vazir;
+}
+
+
 .advertising-image img{
     height: 150px;
     width: 200px;
