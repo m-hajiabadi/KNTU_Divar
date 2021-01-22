@@ -63,11 +63,9 @@ li a{
 }
 
 
-.latest{
-    background-color: #ffffff;
-    /* background-image: url('./defaultpic.png'); */
+.main-ads{
+    background-color: #be3737;
     background-size:100% 100%;
-    background-color: #cccccc;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,103 +76,68 @@ li a{
     
 }
 
-.latest-lyrics {
+.ads {
     padding: 25px;
-    border-radius: 40px;
-
 }
 
-.latest-lyrics .row {
-    border-radius: 40px;
+.ads img{
+    width: 200px; height: 200px;
+    background-image: url(./defaultpic.png);
+    border-radius: 15px 0 0 15px;
 }
 
+.ads-card{
+    position: relative;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
 
-.latest-header .title h1 {
-    font-size: 40px;
-    font-weight: bold;
+#cost{
+    margin-bottom: 10px;
+}
+
+.page-footer {
+    background-color: #eeeeee;
+    color: #1C2331;
     font-family: Vazir;
-    
 }
 
-.latest-card {
-    background-color: #ffffff;
-    opacity: .9;
-    margin: 20px;
-    border-radius: 20px;
-
+.footer-copyright {
+    color: #1C2331;
+    background-color:    rgb(189, 187, 186)  ;
 }
 
-.latest-card a {
-    color:#1C2331;    
+.contact-us p {
+    direction: ltr;
+}
+.footer-links{
+    padding: 20px 0;
 }
 
-.latest-card p {
-    overflow-wrap: break-word;
-  }
 
-.poem {
-    font-size: 18px;
-    font-weight: bold;
-}
 
-.poem p {
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
     text-align: center;
+    text-decoration: none;
 }
 
-.comment {
-    font-size: 14px;
-    height: 150px;
+.fa:hover {
+    opacity: 0.7;
 }
 
-.comment p {
-    text-align: right;
-}
 
-.info {
-    /* display: flex;
-    justify-content: center; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(189, 187, 186);
-    padding: 5px;
-}
 
-.user-info a {
-    display: flex;
-    align-items: center;
-    color: #8c8c8c;
-}
 
-.user-info a:hover {
-    color: black;
-}
 
-.info .user-avatar img {
-    border-radius: 50%;
-    max-width: 20px;
-    height: 20px;
-}
 
-.info .user-username span {
-    font-size: .75rem;
-    text-align: right;
-}
 
-.post-meta span {
-    font-size: .625rem;
-    font-weight: 600;
-    opacity: .7;
-}
 
-.post-meta i {
-    font-size: 1.1em;
-}
 
-.poem img{
-    height: 150px;
-    width: 200px;
-    border: solid 2px  rgb(88, 87, 87);
-    border-radius: 5px;
-    margin: 5px;
-}

@@ -6,7 +6,7 @@ if ($conn -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
   exit();
 }
-$sql = 'SELECT id,name, city,cost,image FROM advertising';
+$sql = 'SELECT id,name, city,cost,type,description,image FROM advertising';
 // mysqli_select_db('divar');
 $retval = mysqli_query( $conn, $sql);
 

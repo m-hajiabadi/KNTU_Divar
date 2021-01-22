@@ -95,59 +95,96 @@
             <?php endforeach; ?> 
     </div> -->
 
-    <div class="latest">
-        <div class="latest-lyrics container-fluid ">
+    <div class="main-ads">
+        <div class="ads container-fluid ">
 
             <div class="row mx-3">
                 <?php foreach ($ads as $value) : ?>
                     <div class="col-md-4">
-
-                        <div class="latest-card pt-4">
-                            <a href="`/showpoem/id=${beyt[2]}`">
-                                <div class="poem p-2 mt-5">
-                                    <?= $value['name']; ?><br>
-                                    <?= $value['cost']; ?>
-                                </div>
-                                <div class="poem p-2 mt-5">
-                                    <img src=<?php echo "upload/" . $value['image']; ?> alt="تصویر خدمت یا کالا">
-                                </div>
-                            </a>
-
-                            <div class="info mt-5">
-
-                                <div class="user-info ">
-
-                                    <a :href="`/showprofile/id=${beyt[5]}`">
-                                        <div class="user-avatar ml-2 ">
-                                            <img src="./css/defaultpic.png" alt="user avatar ">
-                                        </div>
-                                        <div class="user-username ">
-                                            <span class="text-center "><?= $value['city']; ?></span>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="post-meta ">
-
-                                    <span>
-                                        <i class="far fa-clock ml-1"></i>3دی
-                                    </span>
-                                </div>
+                        <div class="ads-card flex-md-row mb-4 box-shadow h-md-250">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <strong class="d-inline-block mb-2 text-primary"><?= $value['type']; ?></strong>
+                                <h3 class="mb-0">
+                                    <a class="text-dark" href="#"><?= $value['name']; ?></a>
+                                </h3>
+                                <div class="mb-1 text-muted"><?= $value['city']; ?></div>
+                                <p class="card-text mb-auto"><?= $value['description']; ?></p>
+                                <a id="cost" href="#"><?= $value['cost']; ?> تومان</a>
+                                <a href="#" class="btn btn-primary">مشاهده شماره تماس</a>
                             </div>
-
+                            <img class="card-img-right flex-auto d-none d-md-block" src=<?php echo "upload/" . $value['image']; ?> alt="">
                         </div>
-
                     </div>
-
-
-
                 <?php endforeach; ?>
             </div>
         </div>
+        
         <?php 
         // var_dump($_COOKIE);
         ?>
     </div>
+    <footer class="page-footer font-small blue-grey lighten-5 ">
+
+   
+
+<!-- Footer Links -->
+<div class="footer-links container text-center text-md-left ">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text ">
+
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4 ">
+
+            <!-- Content -->
+            <h6 class="text-uppercase font-weight-bold text-md-center pb-3">
+                <img src="./css/divar.png" alt="logo " width="130 ">
+                
+            </h6>
+
+        </div>
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mb-4 ">
+
+            <!-- Content -->
+            <h6 class="text-uppercase font-weight-bold text-center pb-3">
+                <span>چارسوق</span>  
+            </h6>
+            <p style="text-align: center;">
+                پروژه درس مهندسی اینترنت
+            </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="contact-us col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center ">
+
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold pb-3">تماس با ما</h6>
+            <p>
+                <i class="fa fa-home "></i> ایران( تهران - بیرجند) </p>
+            <p>
+                <i class="fa fa-envelope "></i> info@charsough.com</p>
+
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+</div>
+<!-- Footer Links -->
+
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-1 font-weight-bold ">تمام حقوق مادی و معنوی این وبسایت متعلق به چارسوق است
+    <br>
+    <p style="color: #37474F; "> © Copyright 2021</p>
+</div>
+<!-- Copyright -->
+
+</footer>
 
     <script type="text/javascript" src="./js/home.js"></script>
 </body>
