@@ -94,7 +94,7 @@
                                 </h3>
                                 <div class="mb-1 text-muted" title="شهر"><?= $value['city']; ?></div>
                                 <p class="card-text mb-auto" title="توضیحات"><?= $value['description']; ?></p>
-                                <a id="cost" title="قیمت"><?= convertEnglishNumbersToPersian($value['cost']); ?> تومان</a>
+                                <a id="cost" title="قیمت"><?= ToPersian($value['cost']); ?> تومان</a>
                                 <a href="#" class="btn btn-primary">مشاهده شماره تماس</a>
                             </div>
                             <img class="card-img-right flex-auto d-none d-md-block" src=<?php echo "upload/" . $value['image']; ?> alt="">
@@ -115,7 +115,7 @@
         <?php
         for ($i = 1; $i <= $total_pages; $i++) {
 
-            echo '<a id="page" href=?pageno='. $i . '>' . $i . '</a>';
+            echo '<a id="page" href=?pageno='. $i . '>' . ToPersian($i) . '</a>';
         }?>
     </div>
 

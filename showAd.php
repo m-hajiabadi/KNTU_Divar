@@ -1,4 +1,5 @@
 <?php include("./php/showAdBack.php") ?>
+<?php include_once("./php/homeback.php") ?>
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +16,7 @@
         <h1 title="نام آگهی"><?php echo $ad['name']; ?></h1>
         <p class="title" title="نوع آگهی"><?php echo $ad['type']; ?></p>
         <p title="شهر"><?php echo $ad['city']; ?></p>
-        <p title="قیمت"><?php echo $ad['cost']; ?></p>
+        <p title="قیمت"><?php echo ToPersian($ad['cost']); ?> تومان</p>
         <p title="توضیحات"><?php echo $ad['description']; ?></p>
 
         <p><button onclick="showPhoneNumber()">تماس با فروشنده</button></p>
