@@ -63,3 +63,118 @@ li a{
 }
 
 
+.latest{
+    background-color: #ffffff;
+    /* background-image: url('./defaultpic.png'); */
+    background-size:100% 100%;
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-family: Vazir;
+    
+}
+
+.latest-lyrics {
+    padding: 25px;
+    border-radius: 40px;
+
+}
+
+.latest-lyrics .row {
+    border-radius: 40px;
+}
+
+
+.latest-header .title h1 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Vazir;
+    
+}
+
+.latest-card {
+    background-color: #ffffff;
+    opacity: .9;
+    margin: 20px;
+    border-radius: 20px;
+
+}
+
+.latest-card a {
+    color:#1C2331;    
+}
+
+.latest-card p {
+    overflow-wrap: break-word;
+  }
+
+.poem {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.poem p {
+    text-align: center;
+}
+
+.comment {
+    font-size: 14px;
+    height: 150px;
+}
+
+.comment p {
+    text-align: right;
+}
+
+.info {
+    /* display: flex;
+    justify-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(189, 187, 186);
+    padding: 5px;
+}
+
+.user-info a {
+    display: flex;
+    align-items: center;
+    color: #8c8c8c;
+}
+
+.user-info a:hover {
+    color: black;
+}
+
+.info .user-avatar img {
+    border-radius: 50%;
+    max-width: 20px;
+    height: 20px;
+}
+
+.info .user-username span {
+    font-size: .75rem;
+    text-align: right;
+}
+
+.post-meta span {
+    font-size: .625rem;
+    font-weight: 600;
+    opacity: .7;
+}
+
+.post-meta i {
+    font-size: 1.1em;
+}
+
+.poem img{
+    height: 150px;
+    width: 200px;
+    border: solid 2px  rgb(88, 87, 87);
+    border-radius: 5px;
+    margin: 5px;
+}

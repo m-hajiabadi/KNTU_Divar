@@ -5,11 +5,13 @@ CREATE TABLE users
   );
 ///////////////////////////////////////////////////////
 CREATE TABLE advertising
-( id int PRIMARY KEY,
+( id int PRIMARY KEY AUTO_INCREMENT,
   name varchar(255) NOT NULL,
   city varchar(255) NOT NULL,
   type varchar(255) NOT NULL,
   description varchar(255) NOT NULL,
-  cost varchar(255) NOT NULL
+  cost varchar(255) NOT NULL,
+  ALTER TABLE advertising
+ADD image varchar(255);
   );
 
