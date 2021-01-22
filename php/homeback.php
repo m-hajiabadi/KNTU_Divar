@@ -1,5 +1,6 @@
 <?php
 $conn = new mysqli("localhost","root","","divar");
+$baseUrl = "/KNTU_DIVAR/";
 
 // Check connection
 if ($conn -> connect_errno) {

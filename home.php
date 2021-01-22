@@ -103,7 +103,7 @@
                     <div class="col-md-4">
 
                         <div class="latest-card pt-4">
-                            <a href="`/showpoem/id=${beyt[2]}`">
+                            <a href=<?php echo $baseUrl."showAd.php?id=".$value['id'] ?> >
                                 <div class="poem p-2 mt-5">
                                     <?= $value['name']; ?><br>
                                     <?= $value['cost']; ?>
@@ -145,7 +145,7 @@
             </div>
         </div>
         <?php 
-        // var_dump($_COOKIE);
+        var_dump($_SERVER);
         ?>
     </div>
 
