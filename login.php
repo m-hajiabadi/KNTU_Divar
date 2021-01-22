@@ -1,7 +1,8 @@
-<?php include_once("./php/loginBack.php") ?>
- 
- <!DOCTYPE html>
+<?php include("./php/loginBack.php") ?>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>ورود به دیوار</title>
@@ -15,8 +16,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div class="wrapper">
+    <!-- <div class="wrapper">
         <h2>ورود</h2>
         <form action="./php/loginBack.php" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
@@ -34,26 +36,27 @@
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
-    </div>  
+    </div>   -->
 
     <div class="main">
 
         <div class="signin-form">
 
-            <form action=" /examples/actions/confirmation.php" method="post">
+            <form action=" ./php/loginBack.php" method="post">
 
                 <img src="./css/divar.png" alt="website logo">
 
                 <h2> ورود به دیوار</h2>
-
                 <div class="or-seperator"></div>
 
-                <div class="form-group">
-                    <input type="text" class="form-control input-lg " name="username" placeholder="نام کاربری" required="required">
+                <div class="form-group <?php echo (isset($_SESSION['username_err'])) ? 'has-error' : ''; ?>">
+                    <input type="text" class="form-control input-lg " name="username" placeholder="نام کاربری" required="required" value="<?php echo $username; ?>">
+                    <span class="help-block"><?php echo (isset($_SESSION['username_err']))  ? $_SESSION['username_err'] : '';; ?></span>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group <?php echo (isset($_SESSION['password_err'])) ? 'has-error' : ''; ?>">
                     <input type="password" class="form-control input-lg" name="password" placeholder="گذرواژه" required="required">
+                    <span class="help-block"><?php echo (isset($_SESSION['password_err'])) ? $_SESSION['password_err'] : ''; ?></span>
                 </div>
 
 
@@ -61,17 +64,23 @@
 
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-lg btn-block signin-btn">ورود</button>
+                    <button type="submit" class="btn btn-success btn-lg btn-block signin-btn" name="login" value="Login">ورود</button>
                 </div>
 
                 <div class="text-center"> هنوز ثبت نام نکر دید؟ <a href="./register.php"> عضویت </a></div>
                 <div class="back-home text-center"><a class="homepage" href="home.php">صفحه اصلی</a></div>
 
+                <?php
+                session_destroy();
+                ?>
             </form>
 
 
         </div>
 
-    </div>  
+
+
+    </div>
 </body>
+
 </html>
