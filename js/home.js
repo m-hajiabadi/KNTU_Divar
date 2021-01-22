@@ -1,8 +1,14 @@
-function submitAdsPage(){
-    window.location.href = "./createAd.php";
+function submitAdsPage(isLogin){
+    if(isLogin){
+        window.location.href = "./createAd.php";
+    }else{
+        alert("برای ثبت آگهی ابتدا باید وارد شوید");
+        window.location.href = "./login.php";
+    }
 }
 
-function reginster(){
+function register(){
+   
     window.location.href = "./register.php";
 }
 

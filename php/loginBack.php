@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // var_dump(get_defined_vars());
     mysqli_close($link);
     header("location: ../login.php");
-
+    
 
 }
 

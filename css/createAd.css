@@ -1,3 +1,166 @@
-p.rtl{
-    direction:ltr;
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Vazir.eot');
+    src: url('fonts/Vazir.eot?#iefix') format('embedded-opentype'), url('fonts/Vazir.woff2') format('woff2'), url('fonts/Vazir.woff') format('woff'), url('fonts/Vazir.ttf') format('truetype');
+}
+
+body {
+    font-family: Vazir
+}
+
+.form-control {
+    font-size: 16px;
+    transition: all 0.4s;
+    box-shadow: none;
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: #5cb85c;
+}
+
+.form-control,
+.btn {
+    border-radius: 15px;
+    outline: none !important;
+}
+
+.main {
+    padding: 80px;
+}
+
+.create-ad-form {
+    width: 480px;
+    margin: auto;
+    padding: 30px 0;
+    font-family: Vazir
+}
+
+.create-ad-form form {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+.create-ad-form img {
+    height: 35px;
+    width: 30px;
+    max-width: 35px;
+    margin: auto;
+    display: block;
+}
+
+.create-ad-form a {
+    font-weight: bold;
+    color: #5cb85c;
+}
+
+.create-ad-form h2 {
+    text-align: center;
+    font-size: 34px;
+    margin: 10px 0 15px;
+}
+
+.create-ad-form .hint-text {
+    color: #999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-ad-form .form-group {
+    margin-bottom: 20px;
+}
+
+.create-ad-form .btn {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.create-ad-btn {
+    text-align: center;
+    border-color: #5cb85c;
+    transition: all 0.4s;
+}
+
+.create-ad-btn:hover {
+    background: #5cb85c;
+    opacity: 0.8;
+}
+
+.or-seperator {
+    margin: 50px 0 15px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.or-seperator b {
+    padding: 0 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+
+.social-btn .btn {
+    color: #fff;
+    margin: 10px 0 0 15px;
+    font-size: 15px;
+    border-radius: 50px;
+    font-weight: normal;
+    border: none;
+    transition: all 0.4s;
+}
+
+.social-btn .btn:first-child {
+    margin-left: 0;
+}
+
+.social-btn .btn:hover {
+    opacity: 0.8;
+}
+
+.social-btn .btn-danger {
+    background: #df4930;
+}
+
+.social-btn .btn i {
+    margin: 3px auto;
+    font-size: 20px;
+    width: 25px;
+    max-width: 350px;
+}
+
+.type{
+    width: 100%;
+    max-width:100%;
+    direction: rtl;
+    font-family: Vazir;
+}
+
+#desc{
+    width: 100%;
+    max-width:100%;
+    height: 150px;
+    direction: rtl;
+}
+
+#pic{
+    width: 100%;
+    max-width:100%;
+    direction: rtl;
+    font-family: Vazir;
 }

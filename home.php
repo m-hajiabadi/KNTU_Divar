@@ -22,31 +22,24 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
-        <button class="btn btn-outline-success" id="submitAds" type="button" onclick="submitAdsPage()">ثبت آگهی</button>
-        <button class="btn btn-sm btn-outline-secondary" type="button" onclick="reginster()">ثبت نام</button>
- 
-      </form>
-    </nav> -->
-
     <div class="mynav sticky-top">
         <a class="navbar-brand" href="home.php">
-            <img src="./css/divar.png" alt="دیوار" loading="lazy">
+            <img src="./css/nasir_divar.png" alt="دیوار" loading="lazy">
         </a>
 
         <ul class="nav nav-pills">
             <li class="nav-item" id="submit-ads">
-                <a class="nav-link active" aria-current="page" href="#" onclick="submitAdsPage()">ثبت آگهی</a>
+
+                <a class="nav-link active" aria-current="page" href="#" onclick="submitAdsPage(<?php echo (isset($_COOKIE['username'])); ?>)">ثبت آگهی</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">تماس با ما</a>
+                <a class="nav-link" href="#contactus">تماس با ما</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">درباره ما</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" onclick="reginster()">ثبت نام</a>
+                <a class="nav-link" href="#" onclick="register()">ثبت نام</a>
             </li>
             <li class="nav-item">
                 <?php
@@ -56,7 +49,7 @@
                     echo ' <a class="nav-link" href="#" onclick="login()">ورود</a>';
                 } else {
                     echo '<a class="nav-link" href="logout.php">خروج</a>';
-                    echo $_COOKIE['username'];
+                    echo '<li class="username nav-item"><a class="nav-link">خوش آمدی' . $_COOKIE['username'] . '</a></li>';
                 }
                 ?>
 
@@ -66,88 +59,135 @@
 
     </div>
 
-    <!-- <div class="container">
-        <div class="row">
-            <?php foreach ($ads as $value) : ?>
-            <div class="advertising col-md-4">
-                <div class="row">
-                    <div class="info col-md-4">
-                        <div class="name row">
-                            <?php
-                            // echo($temp['name']);
-                            ?>
-                            <?= $value['city']; ?>
-                            <?= $value['cost']; ?>
-                            <?= $value['name']; ?>
-                        </div>
-                        <div class="cost row">
-                            <?php
-                            // echo($temp['cost']);
-                            ?>
-                        </div>
-                    </div>
-                    <div class="advertising-image col-md-8">
-                        <img src=<?php echo "upload/" . $value['image']; ?> alt="تصویر خدمت یا کالا">
-                    </div>
-                </div>  
-                
-            </div>
-            <?php endforeach; ?> 
-    </div> -->
+    <div class="AboutUs" id="AboutUs">
+        <div class="aboutus pt-5">
+            <div class="container">
 
-    <div class="latest">
-        <div class="latest-lyrics container-fluid ">
+                <div class="row">
+                    <div class="col-sm-6 AboutUs-info pr-5">
+
+                        <h1 class="title ">درباره دیوار نصیر</h1>
+                        <p id="description">
+                            در دیوار نصیر  به آسانی می‌توانید نیازمندی‌هایتان را بیابید اگر به دنبال خدمت یا کالایی با کیفیت به صرفه و امن هستید اصلا جای خوبی نیامدید
+                            این پروژه صرفا برای گرفتن نمره زده شده است و باگ از در و دیوار آن میریزد.</p>
+
+
+                    </div>
+
+                    <div class="AboutUs-logo col-sm-6 ">
+                        <img class=" mx-auto d-block pt-5" src="./css/nasir_divar.png" alt="Logo ">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr class="rounded">
+    <div class="main-ads">
+        <div class="ads container-fluid ">
 
             <div class="row mx-3">
                 <?php foreach ($ads as $value) : ?>
                     <div class="col-md-4">
-
-                        <div class="latest-card pt-4">
-                            <a href=<?php echo $baseUrl."showAd.php?id=".$value['id'] ?> >
-                                <div class="poem p-2 mt-5">
-                                    <?= $value['name']; ?><br>
-                                    <?= $value['cost']; ?>
-                                </div>
-                                <div class="poem p-2 mt-5">
-                                    <img src=<?php echo "upload/" . $value['image']; ?> alt="تصویر خدمت یا کالا">
-                                </div>
-                            </a>
-
-                            <div class="info mt-5">
-
-                                <div class="user-info ">
-
-                                    <a :href="`/showprofile/id=${beyt[5]}`">
-                                        <div class="user-avatar ml-2 ">
-                                            <img src="./css/defaultpic.png" alt="user avatar ">
-                                        </div>
-                                        <div class="user-username ">
-                                            <span class="text-center "><?= $value['city']; ?></span>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="post-meta ">
-
-                                    <span>
-                                        <i class="far fa-clock ml-1"></i>3دی
-                                    </span>
-                                </div>
+                        <div class="ads-card flex-md-row mb-4 box-shadow h-md-250">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <strong class="d-inline-block mb-2 text-primary"><?= $value['type']; ?></strong>
+                                <h3 class="mb-0">
+                                    <a class="text-dark" href=<?php echo $baseUrl . "showAd?id=" . $value['id'] ?>><?= $value['name']; ?></a>
+                                </h3>
+                                <div class="mb-1 text-muted"><?= $value['city']; ?></div>
+                                <p class="card-text mb-auto" title="توضیحات"><?= $value['description']; ?></p>
+                                <a id="cost" href="#"><?= $value['cost']; ?> تومان</a>
+                                <a href="#" class="btn btn-primary">مشاهده شماره تماس</a>
                             </div>
-
+                            <img class="card-img-right flex-auto d-none d-md-block" src=<?php echo "upload/" . $value['image']; ?> alt="">
                         </div>
-
                     </div>
-
-
-
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php 
-        var_dump($_SERVER);
+
+        <?php
+        // var_dump($_SERVER);
         ?>
     </div>
+
+
+    <!-- // pagination -->
+    <div class="pagination d-flex justify-content-center">
+        <?php
+        for ($i = 1; $i <= $total_pages; $i++) {
+
+            echo '<a id="page" href=?pageno='. $i . '>' . $i . '</a>';
+        }?>
+    </div>
+
+
+
+    <footer class="page-footer font-small blue-grey lighten-5 " id="contactus">
+
+
+
+        <!-- Footer Links -->
+        <div class="footer-links container text-center text-md-left ">
+
+            <!-- Grid row -->
+            <div class="row mt-3 dark-grey-text ">
+
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4 ">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold text-md-center pb-3">
+                        <img src="./css/nasir_divar.png" alt="logo " width="130 ">
+
+                    </h6>
+
+                </div>
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4 ">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold text-center pb-3">
+                        <span>چارسوق</span>
+                    </h6>
+                    <p style="text-align: center;">
+                        پروژه درس مهندسی اینترنت
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="contact-us col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center ">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold pb-3">تماس با ما</h6>
+                    <p>
+                        <i class="fa fa-home "></i> ایران( تهران - بیرجند)
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope "></i> info@charsough.com
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-1 font-weight-bold ">تمام حقوق مادی و معنوی این وبسایت متعلق به چارسوق است
+            <br>
+            <p style="color: #37474F; "> © Copyright 2021</p>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
 
     <script type="text/javascript" src="./js/home.js"></script>
 </body>

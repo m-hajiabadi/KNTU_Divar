@@ -9,18 +9,22 @@
 
 <body>
 
-    <h2 style="text-align:center">آگهی تبلیغات</h2>
 
     <div class="card">
-        <img src=<?php echo "upload/" . $ad['image']; ?> alt="تصویر خدمت یا کالا" style="width:100%">
-        <h1><?php echo $ad['name']; ?></h1>
-        <p class="title"><?php echo $ad['type']; ?></p>
-        <p><?php echo $ad['city']; ?></p>
-        <p><?php echo $ad['cost']; ?></p>
-        <p><?php echo $ad['description']; ?></p>
+        <img src=<?php echo "upload/" . $ad['image']; ?> alt="">
+        <h1 title="نام آگهی"><?php echo $ad['name']; ?></h1>
+        <p class="title" title="نوع آگهی"><?php echo $ad['type']; ?></p>
+        <p title="شهر"><?php echo $ad['city']; ?></p>
+        <p title="قیمت"><?php echo $ad['cost']; ?></p>
+        <p title="توضیحات"><?php echo $ad['description']; ?></p>
 
-        <p><button>تماس با فروشنده</button></p>
+        <p><button onclick="showPhoneNumber()">تماس با فروشنده</button></p>
     </div>
+    <div class="homepage container">
+        <a  href="home.php">صفحه اصلی</a>
+    </div>
+
+    
 
 </body>
 
