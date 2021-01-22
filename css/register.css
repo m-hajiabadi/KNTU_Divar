@@ -57,7 +57,12 @@ body {
 
 .signup-form a {
     font-weight: bold;
-    color: #5cb85c;
+    color: red;
+}
+
+.signup-form a:hover {
+    font-weight: bold;
+    color: #be3737;
 }
 
 .signup-form h2 {
@@ -85,7 +90,6 @@ body {
 
 .signup-btn {
     text-align: center;
-    border-color: #5cb85c;
     transition: all 0.4s;
 }
 
@@ -145,8 +149,14 @@ body {
     max-width: 350px;
 }
 
+#submit{
+    background-color: #be3737;
+    border-color: #be3737;
+}
+
 span{
     color:red;
     font-size: 10px;
     float: right;
 }
+

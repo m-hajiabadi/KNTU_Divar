@@ -21,9 +21,9 @@
 
              <form action="./php/registerBack.php" method="post">
 
-                 <img src="./css/divar.png" alt="website logo">
+                 <img src="./css/nasir_divar.png" alt="website logo">
 
-                 <h2>ثبت نام در دیوار</h2>
+                 <h2>ثبت نام در دیوار نصیر</h2>
 
 
                  <div class="or-seperator">
@@ -50,11 +50,11 @@
 
 
                  <div class="form-group">
-                     <button type="submit" class="btn btn-success btn-lg btn-block signup-btn"> ثبت نام </button>
-                     <input type="reset" class="btn btn-default" value="Reset">
+                     <button type="submit" class="btn btn-success btn-lg btn-block signup-btn" id="submit"> ثبت نام </button>
+                     <!-- <input type="reset" class="btn btn-default" value="بازنشانی"> -->
                  </div>
 
-                 <div class="text-center"> حساب کاربری دارید ؟ <a href="login.php">ورود به دیوار</a></div>
+                 <div class="text-center"> حساب کاربری دارید ؟ <a href="login.php">ورود به دیوار نصیر</a></div>
                  <div class="back-home text-center"><a class="homepage" href="home.php">صفحه اصلی</a></div>
                  <?php
                     session_destroy();

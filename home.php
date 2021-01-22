@@ -17,11 +17,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-
 </head>
 
 <body>
+
     <div class="mynav sticky-top">
         <a class="navbar-brand" href="home.php">
             <img src="./css/nasir_divar.png" alt="دیوار" loading="lazy">
@@ -49,16 +48,14 @@
                     echo ' <a class="nav-link" href="#" onclick="login()">ورود</a>';
                 } else {
                     echo '<a class="nav-link" href="logout.php">خروج</a>';
-                    echo '<li class="username nav-item"><a class="nav-link">خوش آمدی' . $_COOKIE['username'] . '</a></li>';
+                    echo '<li class="username nav-item"><a class="nav-link">خوش آمدی    ' . $_COOKIE['username'] . '</a></li>';
                 }
                 ?>
 
             </li>
-
         </ul>
-
     </div>
-
+    
     <div class="AboutUs" id="AboutUs">
         <div class="aboutus pt-5">
             <div class="container">
@@ -91,13 +88,13 @@
                     <div class="col-md-4">
                         <div class="ads-card flex-md-row mb-4 box-shadow h-md-250">
                             <div class="card-body d-flex flex-column align-items-start">
-                                <strong class="d-inline-block mb-2 text-primary"><?= $value['type']; ?></strong>
+                                <strong class="d-inline-block mb-2 text-primary" title="نوع"><?= $value['type']; ?></strong>
                                 <h3 class="mb-0">
-                                    <a class="text-dark" href=<?php echo $baseUrl . "showAd?id=" . $value['id'] ?>><?= $value['name']; ?></a>
+                                    <a class="text-dark" href=<?php echo $baseUrl . "showAd?id=" . $value['id'] ?> title="نام"><?= $value['name']; ?></a>
                                 </h3>
-                                <div class="mb-1 text-muted"><?= $value['city']; ?></div>
+                                <div class="mb-1 text-muted" title="شهر"><?= $value['city']; ?></div>
                                 <p class="card-text mb-auto" title="توضیحات"><?= $value['description']; ?></p>
-                                <a id="cost" href="#"><?= $value['cost']; ?> تومان</a>
+                                <a id="cost" title="قیمت"><?= convertEnglishNumbersToPersian($value['cost']); ?> تومان</a>
                                 <a href="#" class="btn btn-primary">مشاهده شماره تماس</a>
                             </div>
                             <img class="card-img-right flex-auto d-none d-md-block" src=<?php echo "upload/" . $value['image']; ?> alt="">

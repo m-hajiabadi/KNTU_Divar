@@ -44,9 +44,9 @@
 
             <form action=" ./php/loginBack.php" method="post">
 
-                <img src="./css/divar.png" alt="website logo">
+                <img src="./css/nasir_divar.png" alt="website logo">
 
-                <h2> ورود به دیوار</h2>
+                <h2> ورود به دیوار نصیر</h2>
                 <div class="or-seperator"></div>
 
                 <div class="form-group <?php echo (isset($_SESSION['username_err'])) ? 'has-error' : ''; ?>">
@@ -64,10 +64,10 @@
 
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-lg btn-block signin-btn" name="login" value="Login">ورود</button>
+                    <button type="submit" class="btn btn-success btn-lg btn-block signin-btn" name="login" value="Login" id="login">ورود</button>
                 </div>
 
-                <div class="text-center"> هنوز ثبت نام نکر دید؟ <a href="./register.php"> عضویت </a></div>
+                <div class="text-center"> هنوز ثبت نام نکر دید؟ <a href="./register.php"> عضویت  در دیوار نصیر</a></div>
                 <div class="back-home text-center"><a class="homepage" href="home.php">صفحه اصلی</a></div>
 
                 <?php

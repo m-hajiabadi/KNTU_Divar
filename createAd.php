@@ -19,80 +19,39 @@
 </head>
 
 <body>
-	<!-- <div class="container">
-		<div class="col-md-4">
-			<div class="signup-form">
-				<form action="./php/createAdBack.php" method="post" enctype="multipart/form-data">
-					<h2>Register</h2>
-					<p class="hint-text">ثبت آگهی</p>
-					<div class="form-group">
-						<div class="row">
-							<div class="col"><input type="text" class="form-control" name="name" placeholder="نام" required="required"></div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="row">
-							<div class="col"><input type="text" class="form-control" name="cost" placeholder="قیمت" required="required"></div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="row">
-							<div class="col"><input type="text" class="form-control" name="city" placeholder="شهر" required="required"></div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="row">
-							<div class="col"><input type="text" class="form-control" name="type" placeholder="نوع" required="required"></div>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="row">
-							<div class="col"><input type="text" class="form-control" name="desc" placeholder="توضیحات" required="required"></div>
-						</div>
-
-						<div class="row">
-							<p>تصویر کالا :  </p>
-							<input type='file' name='file' required="required" />
-						</div>
-
-						<div class="form-group">
-							<button type="submit" name="save" class="btn btn-success btn-lg btn-block">ثبت کن این آگهی بی صاحاب رو </button>
-						</div>
-
-
-
-				</form>
-
-			</div>
-		</div>
-		<div class="col-md">
-		</div>
-
-	</div> -->
-
 	<div class="main">
 
         <div class="create-ad-form">
 
             <form action="./php/createAdBack.php" method="post" enctype="multipart/form-data">
 
-                <img src="./css/divar.png" alt="website logo">
+                <img src="./css/nasir_divar.png" alt="website logo">
 
                 <h2> ثبت آگهی</h2>
                 <div class="or-seperator"></div>
 
                 <div class="form-group">
-                    <input type="text" class="form-control input-lg " name="name" placeholder="نام" required="required">
+					<input 
+					type="text" 
+					class="form-control input-lg " 
+					name="name" 
+					placeholder="نام" 
+					required="required"
+					oninvalid="this.setCustomValidity('این قسمت باید حتما پر شود')"
+              		oninput="this.setCustomValidity('')">
                 </div>
 				<div class="form-group">
-                    <input type="text" class="form-control input-lg " name="city" placeholder="شهر" required="required">
+					<input 
+					type="text" 
+					class="form-control input-lg " 
+					name="city" 
+					placeholder="شهر" 
+					required="required"
+					oninvalid="this.setCustomValidity('این قسمت باید حتما پر شود')"
+              		oninput="this.setCustomValidity('')">
                 </div>
 				<div class="form-group">
-					<select name="type" class="type" required="required">
+					<select name="type" class="type form-control" required="required" oninvalid="this.setCustomValidity('این قسمت باید حتما پر شود')" oninput="this.setCustomValidity('')">>
                 	    <option value="0" selected disabled>نوع</option>
 						<option value="خودرو" >خودرو</option>
                 	    <option value="دیجیتال" >دیجیتال</option>
@@ -101,27 +60,41 @@
                 	</select>
 				</div>
 				<div class="form-group">
-                    <input type="text" class="form-control input-lg " name="cost" placeholder="قیمت" required="required">
+					<input 
+					type="text" 
+					class="form-control input-lg " 
+					name="cost" 
+					placeholder="قیمت" 
+					required="required"
+					oninvalid="this.setCustomValidity('این قسمت باید حتما پر شود')"
+              		oninput="this.setCustomValidity('')">
 				</div>
 				
-				<label>تصویر</label>
 				<div class="form-group">
-					<input type='file' name='file' required="required"/>
+					<input type='file' name='file'/>
+					<label>تصویر</label>
                 </div>
 
 				<div class="form-group">
-					<textarea type="text" id="desc" name="desc" maxlength="100" placeholder="توضیحات"></textarea>
+					<textarea 
+					type="text" 
+					id="desc" 
+					name="desc" 
+					maxlength="100" 
+					placeholder="توضیحات"
+					required="required"
+					oninvalid="this.setCustomValidity('این قسمت باید حتما پر شود')"
+              		oninput="this.setCustomValidity('')"></textarea>
 				</div>
 
                 <div class="or-seperator"></div>
 
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-lg btn-block create-ad-btn" name="save">ثبت</button>
+                    <button type="submit" class="btn btn-success btn-lg btn-block create-ad-btn" name="save" id="submit">ثبت</button>
                 </div>
 
 				<div class="back-home text-center"><a class="homepage" href="home.php">صفحه اصلی</a></div>
-				<?php var_dump(get_defined_vars())?>
             </form>
         </div>
     </div>

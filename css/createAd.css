@@ -47,16 +47,20 @@ body {
 }
 
 .create-ad-form img {
-    height: 35px;
-    width: 30px;
-    max-width: 35px;
+    height: 80px;
+    width: 80px;
     margin: auto;
     display: block;
 }
 
 .create-ad-form a {
     font-weight: bold;
-    color: #5cb85c;
+    color: red;
+}
+
+.create-ad-form a:hover {
+    font-weight: bold;
+    color:  #be3737;
 }
 
 .create-ad-form h2 {
@@ -149,8 +153,12 @@ body {
     max-width:100%;
     direction: rtl;
     font-family: Vazir;
+    text-align: center;
 }
 
+select{
+    font-family: Vazir;
+}
 #desc{
     width: 100%;
     max-width:100%;
@@ -163,4 +171,9 @@ body {
     max-width:100%;
     direction: rtl;
     font-family: Vazir;
+}
+
+#submit{
+    background-color: #be3737;
+    border-color: #be3737;
 }
