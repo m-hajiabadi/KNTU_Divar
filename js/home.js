@@ -16,5 +16,9 @@ function login(){
     window.location.href = "./login.php";
 }
 
+function showPhone(phone){
+    alert('0'+phone);
+}
+
 
 

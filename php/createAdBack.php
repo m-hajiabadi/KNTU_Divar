@@ -18,7 +18,7 @@ if ($conn->connect_errno) {
   //upload file 
   move_uploaded_file($_FILES['file']['tmp_name'], $target_dir . $image);
   //insert advertising record to database 
-  $query = "INSERT INTO advertising(name,description,city, cost, type,image) VALUES ('$name','$desc', '$city', '$cost', '$type','".$image."')";
+  $query = "INSERT INTO advertising(name,description,city, cost, type,image,phone) VALUES ('$name','$desc', '$city', '$cost', '$type','".$image."','$phone')";
   var_dump($query);
   $sql = mysqli_query($conn, $query) or die('Could Not Perform the Query' . mysqli_error($conn));
 

@@ -19,14 +19,14 @@
         <p title="قیمت"><?php echo ToPersian($ad['cost']); ?> تومان</p>
         <p title="توضیحات"><?php echo $ad['description']; ?></p>
 
-        <p><button onclick="showPhoneNumber()">تماس با فروشنده</button></p>
+        <p><button onclick="showPhoneNumber(<?php echo $ad['phone']; ?>)">تماس با فروشنده</button></p>
     </div>
     <div class="homepage container">
         <a  href="home.php">صفحه اصلی</a>
     </div>
 
     
-
+    <script type="text/javascript" src="./js/showAd.js"></script>
 </body>
 
 </html>

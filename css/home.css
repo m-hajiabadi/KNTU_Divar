@@ -49,6 +49,13 @@ li{
     background-color: #be3737;
 }
 
+#submit{
+    margin-top:15px;
+    background-color: #be3737;
+    border-color: #be3737;
+}
+
+
 #AboutUs{
     /* background-image: url('../assets/hafez.jpg'); */
     background-size:100% ;
@@ -129,6 +136,7 @@ li{
     margin: 0 auto;
     border-radius: 10px;
     font-family: Vazir;
+    padding-top: 15px;
     
 }
 
@@ -138,6 +146,7 @@ li{
 
 .ads img{
     width: 200px; height: 200px;
+    min-width: 200px;
     background-image: url(./defaultpic.png);
     border-radius: 15px 0 0 15px;
 }
@@ -151,8 +160,13 @@ li{
     background-clip: border-box;
     border-radius: 15px;
     margin-bottom: 25px;
+
 }
 
+.desc{
+    text-align: right;
+    word-break: break-all;
+}
 #cost{
     margin-bottom: 10px;
 }
@@ -216,5 +230,19 @@ li{
     background-color: skyblue;   
 }
 
+.filters{
+    text-align:right;
+    border:solid 2px black;
+    border-radius:5px;
+    /* background:rgb(189, 187, 186); */
+    padding:10px;
+    height:100%;
+    font-family:Vazir;
+
+}
+
+.filters .type input{
+    text-align:left;
+}
 
 

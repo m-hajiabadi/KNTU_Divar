@@ -65,8 +65,8 @@
 
                         <h1 class="title ">درباره دیوار نصیر</h1>
                         <p id="description">
-                            در دیوار نصیر  به آسانی می‌توانید نیازمندی‌هایتان را بیابید اگر به دنبال خدمت یا کالایی با کیفیت به صرفه و امن هستید اصلا جای خوبی نیامدید
-                            این پروژه صرفا برای گرفتن نمره زده شده است و باگ از در و دیوار آن میریزد.</p>
+                            در دیوار نصیر  به آسانی می‌توانید نیازمندی‌هایتان را بیابید اگر به دنبال خدمت یا کالایی با کیفیت به صرفه و امن هستید دیوار نصیر بهترین
+                            انتخاب است</p>
 
 
                     </div>
@@ -79,11 +79,53 @@
             </div>
         </div>
     </div>
+
     <hr class="rounded">
-    <div class="main-ads">
+
+    <div>
         <div class="ads container-fluid ">
 
             <div class="row mx-3">
+                <div class="col-md-2">
+                    <form action="./php/homeback.php" method="get">
+                        <div class="filters card">
+                            <article class="card-group-item">
+                        		<header class="card-header">
+                        			<h6 class="title"> جستجو در اسامی</h6>
+                        		</header>
+                        		<div class="filter-content">
+                        			<div class="card-body">
+                        			<div class="form-group">
+                        			  <input type="text" class="form-control" id="search" placeholder="جستجو" name="search">
+                        			</div>
+                        			</div> <!-- card-body.// -->
+                        		</div>
+                            </article> <!-- card-group-item.// -->
+                            
+                        	<article class="card-group-item">
+                        		<header class="card-header">
+                        			<h6 class="title">نوع</h6>
+                        		</header>
+                        		<div class="type filter-content">
+                        			<div class="card-body">
+                                        <select name="type" id="type" class="custom-control custom-dropdown">
+                                            <option value="0" selected disabled>انتخاب نوع</option>
+                                            <option value="خودرو">خودرو</option>
+                                            <option value="دیجیتال">دیجیتال</option>
+                                            <option value="مراقبت از حیوانات">مراقبت از حیوانات</option>
+                                            <option value="شستشوی خودرو">شستشوی خودرو</option>
+                                        </select>
+
+                        			</div> <!-- card-body.// -->
+                        		</div>
+                        	</article> <!-- card-group-item.// -->
+                        </div> <!-- card.// -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-lg btn-block search-btn" name="filters" id="submit">جستجو</button>
+                            </div>
+                    </form>
+                </div>
+                <div class="main-ads col-md-10" >
                 <?php foreach ($ads as $value) : ?>
                     <div class="col-md-4">
                         <div class="ads-card flex-md-row mb-4 box-shadow h-md-250">
@@ -93,20 +135,24 @@
                                     <a class="text-dark" href=<?php echo $baseUrl . "showAd?id=" . $value['id'] ?> title="نام"><?= $value['name']; ?></a>
                                 </h3>
                                 <div class="mb-1 text-muted" title="شهر"><?= $value['city']; ?></div>
-                                <p class="card-text mb-auto" title="توضیحات"><?= $value['description']; ?></p>
+                                <p class="desc card-text mb-auto" title="توضیحات"><?= $value['description']; ?></p>
                                 <a id="cost" title="قیمت"><?= ToPersian($value['cost']); ?> تومان</a>
-                                <a href="#" class="btn btn-primary">مشاهده شماره تماس</a>
+                                <a href="#" class="btn btn-primary" onclick="showPhone(<?php echo $value['phone']; ?>)">مشاهده شماره تماس</a>
                             </div>
                             <img class="card-img-right flex-auto d-none d-md-block" src=<?php echo "upload/" . $value['image']; ?> alt="">
                         </div>
                     </div>
                 <?php endforeach; ?>
+                </div>
+                
+                
             </div>
         </div>
 
         <?php
-        // var_dump($_SERVER);
+        // var_dump($_GET);
         ?>
+       
     </div>
 
 
@@ -145,9 +191,9 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mb-4 ">
 
                     <!-- Content -->
-                    <h6 class="text-uppercase font-weight-bold text-center pb-3">
-                        <span>چارسوق</span>
-                    </h6>
+                    <h3 class="text-uppercase font-weight-bold text-center pb-3">
+                        <span>دیوارنصیر</span>
+                    </h3>
                     <p style="text-align: center;">
                         پروژه درس مهندسی اینترنت
                     </p>
@@ -159,12 +205,12 @@
                 <div class="contact-us col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center ">
 
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold pb-3">تماس با ما</h6>
+                    <h3 class="text-uppercase font-weight-bold pb-3">تماس با ما</h3>
                     <p>
                         <i class="fa fa-home "></i> ایران( تهران - بیرجند)
                     </p>
                     <p>
-                        <i class="fa fa-envelope "></i> info@charsough.com
+                        <i class="fa fa-envelope "></i> info@nasirdivar.com
                     </p>
 
                 </div>
@@ -178,7 +224,7 @@
 
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-1 font-weight-bold ">تمام حقوق مادی و معنوی این وبسایت متعلق به چارسوق است
+        <div class="footer-copyright text-center py-1 font-weight-bold ">تمام حقوق مادی و معنوی این وبسایت متعلق به دیوارنصیر است
             <br>
             <p style="color: #37474F; "> © Copyright 2021</p>
         </div>

@@ -69,6 +69,16 @@
 					oninvalid="this.setCustomValidity('این قسمت باید حتما پر شود')"
               		oninput="this.setCustomValidity('')">
 				</div>
+				<div class="form-group">
+					<input 
+					type="text" 
+					class="form-control input-lg " 
+					name="phone" 
+					placeholder="شماره تماس" 
+					required="required"
+					oninvalid="this.setCustomValidity('این قسمت باید حتما پر شود')"
+              		oninput="this.setCustomValidity('')">
+				</div>
 				
 				<div class="form-group">
 					<input type='file' name='file'/>
