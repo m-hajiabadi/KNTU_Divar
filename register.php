@@ -4,6 +4,7 @@
  <html lang="en">
 
  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
      <link rel="stylesheet" type="text/css" href="./css/register.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
